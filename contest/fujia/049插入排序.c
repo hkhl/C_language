@@ -25,6 +25,20 @@ void insertsort(int a[])
         a[j+1] = temp;
     }
 }
+//简化代码
+void insertsort1(int a[])
+{
+    int i, j;
+    for(i = 1; i < N; i++)
+        if(a[i] < a[i-1])
+        {
+            int temp = a[i];
+            for(j = i-1; j >= 0 && a[j] > temp; j--) 
+                a[j+1] = a[j];
+            a[j+1] = temp;
+        }
+}
+
 int main()
 {
     int a[N] = {9,4,2,6,7,8,1,3,0,5};
@@ -37,3 +51,16 @@ int main()
     }
     return 0;
 }
+
+
+
+void Swap(int a, int b);
+void Insertsort3(int a[], int n)
+{
+    int i, j;
+    for (i = 1; i < n; i++)
+    for (j = i - 1; j >= 0 && a[j] > a[j + 1]; j--)
+        Swap(a[j], a[j + 1]);
+
+}
+
