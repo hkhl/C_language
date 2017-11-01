@@ -14,6 +14,20 @@
 #include<time.h>
 #include<stdlib.h>
 
+void Game(int sum, int previous);
+
+int main()
+{
+    int sum = 15; //15颗子
+    int previous = 0;
+    printf("(1-3颗)谁先取子, 机0, 人1:");
+    scanf("%d", &previous);
+    
+    Game(sum, previous);
+
+    return 0;
+}
+
 void Game(int sum, int previous)
 {
 
@@ -78,14 +92,3 @@ void Game(int sum, int previous)
     }
 }
 
-int main()
-{
-    int sum = 15; //15颗子
-    int previous = 0;
-    printf("(1-3颗)谁先取子, 机0, 人1:");
-    scanf("%d", &previous);
-    
-    Game(sum, previous);
-
-    return 0;
-}
